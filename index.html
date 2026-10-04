@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Immersive travel guide to Incredible India – explore top 5 places in each state with history, maps & directions.">
+  <title>Incredible India · Immersive Travel Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading India...</div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav>
+      <div class="logo" onclick="goHome()">
+        <i class="fas fa-map-marked-alt"></i> Incredible India
+      </div>
+      <div class="nav-links">
+        <a href="#" onclick="goHome(); return false;">Home</a>
+        <a href="#statesSection" onclick="scrollToStates(); return false;">States</a>
+        <a href="#"
+          onclick="alert('Your immersive travel companion · explore top 5 places in every state.'); return false;">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="heroSection">
+    <div class="hero-badge">
+      <i class="fas fa-star"></i> Awwwards Inspired · Immersive Travel
+    </div>
+    <h1>
+      Discover the soul of<br>
+      <span class="gradient-text">Incredible India</span>
+    </h1>
+    <p>
+      Journey through vibrant states, ancient forts, serene backwaters, and golden beaches.
+      Click any state to uncover its top 5 destinations with history, details, and instant directions.
+    </p>
+    <div class="hero-cta">
+      <a href="#statesSection" class="btn-primary" onclick="scrollToStates(); return false;">
+        <i class="fas fa-compass"></i> Start Exploring
+      </a>
+      <a href="#" class="btn-ghost" onclick="scrollToStates(); return false;">
+        <i class="fas fa-play"></i> View States
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">28+</div>
+        <div class="label">States</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">5</div>
+        <div class="label">Top Places Each</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">∞</div>
+        <div class="label">Memories</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- STATE GRID VIEW -->
+    <section class="view-section" id="statesView">
+      <div id="statesSection"></div>
+      <div class="section-header">
+        <div class="section-eyebrow"><i class="fas fa-location-dot"></i> Choose your destination</div>
+        <h2>Explore States</h2>
+        <p>Click on any state to reveal its top 5 must-visit places with rich history and instant map directions.</p>
+      </div>
+      <div class="state-grid" id="stateGrid"></div>
+    </section>
+
+    <!-- DETAIL VIEW -->
+    <section class="view-section hidden-view" id="detailView">
+      <div class="state-hero" id="stateHero">
+        <div class="state-hero-bg" id="stateHeroBg"></div>
+        <button class="back-btn" onclick="goHome()">
+          <i class="fas fa-arrow-left"></i> All States
+        </button>
+        <div class="state-hero-content">
+          <div class="eyebrow"><i class="fas fa-map-pin"></i> Top 5 Places</div>
+          <h1 id="stateHeroTitle">State Name</h1>
+          <p id="stateHeroDesc">Description of the state and its cultural significance.</p>
+          <div class="state-meta-row" id="stateMetaRow"></div>
+        </div>
+      </div>
+
+      <div class="places-section-title">
+        <i class="fas fa-landmark"></i>
+        Must-Visit Destinations
+        <span class="line"></span>
+      </div>
+      <div class="places-grid" id="placesContainer"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <i class="fas fa-camera"></i> Explore top 5 destinations in each Indian state ·
+      click any place for photo, history &amp; directions <i class="fas fa-location-dot"></i>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
